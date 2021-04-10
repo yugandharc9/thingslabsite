@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444;
+  color: #000000;
 }
 
 a {
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #000000;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   width: 130%;
   height: 95%;
-  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;
+  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), center top no-repeat;
   z-index: 0;
   border-radius: 0 0 50% 50%;
   transform: translateX(-50%) rotate(0deg);
@@ -476,7 +476,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;
+  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), center top no-repeat;
 }
 
 #hero-no-slider h2 {
@@ -731,7 +731,7 @@ section {
   justify-content: center;
   width: 72px;
   height: 72px;
-  background: #f3f8fa;
+  background: #ffffff;
   border-radius: 6px;
   transition: 0.5s;
 }
