@@ -2,207 +2,285 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Inner Page - Arsha Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Arsha - v4.1.0
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Thingslab — a forward-thinking IoT and web tech studio based in India.">
+  <meta property="og:title" content="About Us | Thingslab">
+  <meta property="og:description" content="Meet the team behind Thingslab's IoT and web engineering products.">
+  <meta property="og:type" content="website">
+  <title>About Us | Thingslab</title>
+  <link href="assets/img/Thingslab_Logo/PNG/Logo_Symbol_Only-05.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Jost', sans-serif; background: #f4f7fa; color: #212529; }
+    .navbar-brand img { height: 40px; }
+    .page-hero {
+      background: linear-gradient(135deg, #2A2F4F, #4A55A2);
+      color: #fff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .section-title h2 { font-weight: 700; color: #4A55A2; }
+    .stat-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(74,85,162,0.10);
+    }
+    .stat-card .number { font-size: 2.5rem; font-weight: 700; color: #4A55A2; }
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(74,85,162,0.08);
+    }
+    .team-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2A2F4F, #4A55A2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #fff;
+      margin: 0 auto 16px;
+    }
+    .value-pill {
+      display: inline-block;
+      background: #eef0fa;
+      color: #4A55A2;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 6px 18px;
+      margin: 5px 4px;
+      font-size: 0.95rem;
+    }
+    footer { background-color: #2A2F4F; color: #fff; padding: 30px 0; }
+    footer a { color: #a0aacc; text-decoration: none; }
+    footer a:hover { color: #fff; }
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(74,85,162,0.09);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .team-card:hover { transform: translateY(-4px); }
+    .team-card img { width: 100%; height: 220px; object-fit: cover; }
+    .team-card .team-info { padding: 18px 16px; }
+    .team-card h6 { font-weight: 700; margin-bottom: 2px; }
+    .team-card small { color: #4A55A2; font-weight: 600; }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-inner-pages">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2A2F4F;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo/white.png" alt="Thingslab">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="inner-page.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </div>
     </div>
-  </header><!-- End Header -->
+  </nav>
 
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Inner Page</li>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center" style="background:transparent;">
+          <li class="breadcrumb-item"><a href="index.html" style="color:#a0aacc;">Home</a></li>
+          <li class="breadcrumb-item active" style="color:#fff;">About Us</li>
         </ol>
-        <h2>Inner Page</h2>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
+      </nav>
+      <h1 class="fw-bold mb-3">About Thingslab</h1>
+      <p class="lead mb-0">Building smart technology that makes a real difference.</p>
     </div>
+  </section>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Arsha</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
+  <!-- Who We Are -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="section-title mb-3">
+            <h2>Who We Are</h2>
           </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <p>Thingslab Internet Services is a technology company based in India, specialising in IoT product development, web engineering, and data solutions. We build real, useful technology — from embedded hardware systems to cloud-connected dashboards — for businesses and communities that need reliable digital tools.</p>
+          <p>Founded with a passion for smart systems and purposeful innovation, our small but focused team ships products that work in the real world, not just on paper.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="number">2+</div>
+                <div class="text-muted">IoT Products Shipped</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="number">3</div>
+                <div class="text-muted">Tech Verticals</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="number">100%</div>
+                <div class="text-muted">Made in India</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="number">24/7</div>
+                <div class="text-muted">Cloud Uptime Target</div>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+  <!-- What We Do -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <h2>What We Do</h2>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <i class="bi bi-cpu fs-1 mb-3" style="color:#4A55A2;"></i>
+            <h5 class="fw-bold">IoT Products</h5>
+            <p class="text-muted">End-to-end IoT systems — from embedded firmware and sensor integration to cloud dashboards and mobile apps.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <i class="bi bi-window fs-1 mb-3" style="color:#4A55A2;"></i>
+            <h5 class="fw-bold">Web Engineering</h5>
+            <p class="text-muted">Modern web platforms using React, Next.js, Go, and Elixir. From MVPs to production-grade systems.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <i class="bi bi-bar-chart-line fs-1 mb-3" style="color:#4A55A2;"></i>
+            <h5 class="fw-bold">Data Solutions</h5>
+            <p class="text-muted">Pipelines, analytics, and dashboards that turn raw telemetry and business data into actionable insight.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Core Values -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <div class="section-title mb-4">
+        <h2>Our Core Values</h2>
+      </div>
+      <div class="mb-3">
+        <span class="value-pill"><i class="bi bi-emoji-smile me-1"></i> Fun</span>
+        <span class="value-pill"><i class="bi bi-lightbulb me-1"></i> Creativity</span>
+        <span class="value-pill"><i class="bi bi-shield-check me-1"></i> Honesty</span>
+        <span class="value-pill"><i class="bi bi-rocket me-1"></i> Innovation</span>
+        <span class="value-pill"><i class="bi bi-arrows-move me-1"></i> Flexibility</span>
+        <span class="value-pill"><i class="bi bi-heart me-1"></i> Contribution</span>
+      </div>
+      <p class="text-muted mt-3 col-lg-7 mx-auto">We believe great technology is built by teams that enjoy the work, communicate openly, and stay curious. These values guide every decision we make — from product design to client relationships.</p>
+    </div>
+  </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- Team -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <h2>Meet the Team</h2>
+        <p class="text-muted">The people behind Thingslab's products and solutions.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-card">
+            <img src="assets/img/team/team-1.jpg" alt="Yugandhar Kadu Chaudhari">
+            <div class="team-info">
+              <h6>Yugandhar Kadu Chaudhari</h6>
+              <small>Founder &amp; CEO</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-card">
+            <img src="assets/img/team/team-2.jpg" alt="Team Member">
+            <div class="team-info">
+              <h6>Team Member</h6>
+              <small>IoT Engineer</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card">
+            <img src="assets/img/team/team-3.jpg" alt="Team Member">
+            <div class="team-info">
+              <h6>Team Member</h6>
+              <small>Full-Stack Developer</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-card">
+            <img src="assets/img/team/team-4.jpg" alt="Team Member">
+            <div class="team-info">
+              <h6>Team Member</h6>
+              <small>Data Engineer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Contact CTA -->
+  <section class="py-5" style="background: linear-gradient(135deg, #2A2F4F, #4A55A2); color:#fff;">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-3">Want to work with us?</h3>
+      <p class="mb-4 opacity-75">We're always open to new projects, partnerships, and ideas.</p>
+      <a href="mailto:contact@thingslab.io" class="btn btn-light fw-semibold" style="color:#4A55A2;">
+        <i class="bi bi-envelope me-2"></i>contact@thingslab.io
+      </a>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <img src="assets/img/logo/white.png" alt="Thingslab" style="height:32px;" class="mb-3 d-block mx-auto">
+      <p class="mb-1">
+        <a href="mailto:contact@thingslab.io">contact@thingslab.io</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+917066555130">+91 70665 55130</a>
+      </p>
+      <p class="mb-0" style="font-size:0.85rem; color:#a0aacc;">&copy; 2025 Thingslab Internet Services — Built with curiosity &amp; code.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, once: true, offset: 60 });</script>
 </body>
 
 </html>

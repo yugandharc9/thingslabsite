@@ -4,15 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thingslab provides cutting-edge web development, IoT, and data engineering solutions.">
+  <meta name="description" content="Thingslab Internet Services — IoT products, web engineering, and data solutions built in India.">
+  <meta name="keywords" content="Thingslab, IoT, web development, data engineering, AlertPulse, SmartSwitchGuard, India">
+  <meta property="og:title" content="Thingslab | Smart Web & IoT Solutions">
+  <meta property="og:description" content="IoT products, web engineering, and data solutions built in India.">
+  <meta property="og:image" content="assets/img/Thingslab_Logo/PNG/Logo_Full-04.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thingslab | Smart Web & IoT Solutions">
+  <meta name="twitter:description" content="IoT products, web engineering, and data solutions built in India.">
   <title>Thingslab | Smart Web & IoT Solutions</title>
+  <link href="assets/img/Thingslab_Logo/PNG/Logo_Symbol_Only-05.png" rel="icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Jost', sans-serif;
       background: #f4f7fa;
       color: #212529;
+    }
+    .navbar-brand img {
+      height: 40px;
     }
     .hero {
       background: linear-gradient(135deg, #2A2F4F, #4A55A2);
@@ -20,10 +34,18 @@
       padding: 120px 0 80px;
       text-align: center;
     }
+    .hero-logo {
+      height: 80px;
+      margin-bottom: 28px;
+      filter: brightness(0) invert(1);
+    }
     .btn-primary {
       background-color: #4A55A2;
       border: none;
       padding: 10px 25px;
+    }
+    .btn-primary:hover {
+      background-color: #3a4492;
     }
     .section-title h2 {
       font-weight: 700;
@@ -41,28 +63,121 @@
       font-size: 24px;
       margin: 0 auto 15px;
     }
+    .product-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(74,85,162,0.10);
+      transition: transform 0.2s, box-shadow 0.2s;
+      height: 100%;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(74,85,162,0.18);
+    }
+    .product-card .card-header {
+      background: linear-gradient(135deg, #2A2F4F, #4A55A2);
+      color: #fff;
+      border-radius: 12px 12px 0 0;
+      padding: 20px 24px 14px;
+    }
+    .product-card .card-header h5 {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+    .product-card .card-body {
+      padding: 20px 24px;
+    }
+    .product-tag {
+      display: inline-block;
+      background: #eef0fa;
+      color: #4A55A2;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin: 3px 2px;
+    }
+    .product-card .btn-outline-primary {
+      color: #4A55A2;
+      border-color: #4A55A2;
+      font-weight: 600;
+    }
+    .product-card .btn-outline-primary:hover {
+      background-color: #4A55A2;
+      color: #fff;
+    }
     footer {
       background-color: #2A2F4F;
       color: #fff;
       padding: 30px 0;
     }
+    footer a {
+      color: #a0aacc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 16px rgba(74,85,162,0.09);
+      height: 100%;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '\201C';
+      font-size: 4rem;
+      color: #4A55A2;
+      opacity: 0.15;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+    .testimonial-card .stars { color: #f5a623; }
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(74,85,162,0.09);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .team-card:hover { transform: translateY(-4px); }
+    .team-card img { width: 100%; height: 220px; object-fit: cover; }
+    .team-card .team-info { padding: 18px 16px; }
+    .team-card h6 { font-weight: 700; margin-bottom: 2px; }
+    .team-card small { color: #4A55A2; font-weight: 600; }
+    .client-logo {
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: filter 0.3s, opacity 0.3s;
+      max-height: 50px;
+      object-fit: contain;
+    }
+    .client-logo:hover { filter: none; opacity: 1; }
   </style>
 </head>
 
 <body>
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2A2F4F;">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Thingslab</a>
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo/white.png" alt="Thingslab" class="d-inline-block align-middle">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="inner-page.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#values">Values</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Our Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -72,137 +187,431 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1 class="display-4 fw-bold">Engineering Future-Ready Tech</h1>
-      <p class="lead">From web platforms to IoT systems, we create smart digital infrastructure.</p>
-      <a href="#contact" class="btn btn-primary mt-3">Let's Collaborate</a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="section-title text-center mb-4">
-        <h2>About Thingslab</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <p class="text-center">We are a forward-thinking tech studio committed to building sustainable, scalable, and smart digital solutions. At the heart of Thingslab is a passion for quality, collaboration, and technology with purpose.</p>
-        </div>
-      </div>
+      <img src="assets/img/Thingslab_Logo/PNG/Logo_Full-04.png" alt="Thingslab" class="hero-logo d-block mx-auto">
+      <p class="lead" style="opacity:0.9;">We turn real-world problems into working technology.</p>
+      <a href="#work" class="btn btn-light me-2 mt-3 fw-semibold" style="color:#4A55A2;">See Our Work</a>
+      <a href="#contact" class="btn btn-primary mt-3">Work With Us</a>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-5 bg-light">
+  <section id="services" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
-      <div class="section-title text-center mb-5">
-        <h2>Our Expertise</h2>
+      <div class="section-title text-center mb-2">
+        <h2>What We Do</h2>
       </div>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="icon-circle mb-3"><i class="bi bi-window"></i></div>
-          <h5>Web Development</h5>
-          <p>Modern frontend frameworks (React, Next.js) & secure backend APIs (Node, Go).</p>
+      <p class="text-center text-muted mb-5">We help businesses adopt the right technology — from building products to training your team.</p>
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100 text-center">
+            <div class="icon-circle mb-3"><i class="bi bi-robot"></i></div>
+            <h6 class="fw-bold">Artificial Intelligence</h6>
+            <p class="text-muted small">We add AI to your business — smart automation, image recognition, recommendation engines, and intelligent assistants that save time and reduce manual work.</p>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="icon-circle mb-3"><i class="bi bi-cpu"></i></div>
-          <h5>IoT Engineering</h5>
-          <p>Embedded systems, telemetry, MQTT, and real-time control with Elixir/Phoenix.</p>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="60">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100 text-center">
+            <div class="icon-circle mb-3"><i class="bi bi-cpu"></i></div>
+            <h6 class="fw-bold">IoT Systems</h6>
+            <p class="text-muted small">We connect physical devices to the internet — sensors, switches, alerts, and dashboards that let you monitor and control things remotely in real time.</p>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="icon-circle mb-3"><i class="bi bi-bar-chart"></i></div>
-          <h5>Data Engineering</h5>
-          <p>Batch and stream processing pipelines, data lakes, analytics & dashboards.</p>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="120">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100 text-center">
+            <div class="icon-circle mb-3"><i class="bi bi-gear-wide-connected"></i></div>
+            <h6 class="fw-bold">Automation</h6>
+            <p class="text-muted small">We automate repetitive tasks and workflows so your team spends time on work that actually matters — not manual processes.</p>
+          </div>
         </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="180">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100 text-center">
+            <div class="icon-circle mb-3"><i class="bi bi-window"></i></div>
+            <h6 class="fw-bold">Web Platforms</h6>
+            <p class="text-muted small">We build web platforms — marketplaces, portals, dashboards, and tools — that your customers and teams can use from any browser.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="240">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100 text-center">
+            <div class="icon-circle mb-3"><i class="bi bi-phone"></i></div>
+            <h6 class="fw-bold">App Development</h6>
+            <p class="text-muted small">We build mobile and web apps end to end — from design to deployment. Clean interfaces, secure logins, payments, and real-time features.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100 text-center">
+            <div class="icon-circle mb-3"><i class="bi bi-mortarboard"></i></div>
+            <h6 class="fw-bold">Tech Advisory &amp; Training</h6>
+            <p class="text-muted small">Not sure where to start? We help you pick the right tools, plan your tech roadmap, and train your team to use technology confidently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="section-title mb-3"><h2>What is Thingslab?</h2></div>
+          <p class="fs-5" style="color:#333;">Thingslab is a technology company based in India. We build <strong>web apps, mobile apps, marketplaces, and IoT hardware systems</strong> for real businesses.</p>
+          <p style="color:#555;">We've shipped products for farmers, lab technicians, warehouse managers, and people looking to get married. If you have a business problem and need software or a connected device to solve it, that's what we do.</p>
+          <a href="inner-page.html" class="btn btn-outline-primary mt-2">Learn More About Us</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3 text-center">
+            <div class="col-6">
+              <div class="p-4 bg-white rounded-3 shadow-sm">
+                <div class="fw-bold fs-2" style="color:#4A55A2;">10+</div>
+                <div class="text-muted">Products Built</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 bg-white rounded-3 shadow-sm">
+                <div class="fw-bold fs-2" style="color:#4A55A2;">5</div>
+                <div class="text-muted">Industries Served</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 bg-white rounded-3 shadow-sm">
+                <div class="fw-bold fs-2" style="color:#4A55A2;">IoT</div>
+                <div class="text-muted">Hardware + Cloud</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 bg-white rounded-3 shadow-sm">
+                <div class="fw-bold fs-2" style="color:#4A55A2;">India</div>
+                <div class="text-muted">Headquartered</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Work -->
+  <section id="work" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title text-center mb-2">
+        <h2>Things We've Built</h2>
+      </div>
+      <p class="text-center text-muted mb-5">Real projects, real users. Here's a sample of what we've shipped.</p>
+      <div class="row g-4">
+
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-capsule fs-4" style="color:#4A55A2;"></i>
+              <h6 class="fw-bold mb-0">scan2lab</h6>
+            </div>
+            <p class="text-muted small mb-2">A sample tracking system for diagnostic labs. Lab staff scan samples as they move through the testing workflow, so nothing gets lost and results are always traceable.</p>
+            <span class="product-tag">Healthcare</span>
+            <span class="product-tag">Lab Management</span>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="80">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-tree fs-4" style="color:#4A55A2;"></i>
+              <h6 class="fw-bold mb-0">Direct Marketplace</h6>
+            </div>
+            <p class="text-muted small mb-2">A marketplace where sellers connect directly with customers — no middlemen. Customers browse products, add to cart, pay online, and track their order.</p>
+            <span class="product-tag">Marketplace</span>
+            <span class="product-tag">Payments</span>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="160">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-heart fs-4" style="color:#4A55A2;"></i>
+              <h6 class="fw-bold mb-0">Matrimony Social Network</h6>
+            </div>
+            <p class="text-muted small mb-2">A social networking platform where users create profiles, discover compatible connections, and communicate in real time across web and mobile.</p>
+            <span class="product-tag">Matrimony Social Network</span>
+            <span class="product-tag">Web &amp; Mobile</span>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-box-seam fs-4" style="color:#4A55A2;"></i>
+              <h6 class="fw-bold mb-0">Invento</h6>
+            </div>
+            <p class="text-muted small mb-2">An inventory management app for businesses to track stock levels, product movement, and warehouse operations — with charts and low-stock alerts.</p>
+            <span class="product-tag">Inventory</span>
+            <span class="product-tag">Analytics</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Core Values -->
-  <section id="values" class="py-5">
+  <section id="values" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
-      <div class="section-title text-center mb-5">
-        <h2>Our Core Values</h2>
+      <div class="section-title text-center mb-2">
+        <h2>How We Work</h2>
       </div>
-      <div class="row text-center">
-        <div class="col-md-2">
-          <h5>Fun</h5>
-          <p>Enjoy what you do.</p>
+      <p class="text-center text-muted mb-5">These aren't just words on a wall — they actually shape how we make decisions every day.</p>
+      <div class="row g-3 text-center">
+        <div class="col-md-2 col-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <div class="fs-2 mb-1">🤝</div>
+            <h6 class="fw-bold">Honesty</h6>
+            <p class="text-muted small mb-0">We say what we mean.</p>
+          </div>
         </div>
-        <div class="col-md-2">
-          <h5>Creativity</h5>
-          <p>Think outside the box.</p>
+        <div class="col-md-2 col-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <div class="fs-2 mb-1">🚀</div>
+            <h6 class="fw-bold">Innovation</h6>
+            <p class="text-muted small mb-0">We try new approaches.</p>
+          </div>
         </div>
-        <div class="col-md-2">
-          <h5>Honesty</h5>
-          <p>Communicate genuinely and share ideas.</p>
+        <div class="col-md-2 col-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <div class="fs-2 mb-1">💡</div>
+            <h6 class="fw-bold">Creativity</h6>
+            <p class="text-muted small mb-0">We look for smarter ways.</p>
+          </div>
         </div>
-        <div class="col-md-2">
-          <h5>Innovation</h5>
-          <p>Embrace the unconventional.</p>
+        <div class="col-md-2 col-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <div class="fs-2 mb-1">🔄</div>
+            <h6 class="fw-bold">Flexibility</h6>
+            <p class="text-muted small mb-0">We adapt when things change.</p>
+          </div>
         </div>
-        <div class="col-md-2">
-          <h5>Flexibility</h5>
-          <p>Adapt to change.</p>
+        <div class="col-md-2 col-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <div class="fs-2 mb-1">🌱</div>
+            <h6 class="fw-bold">Contribution</h6>
+            <p class="text-muted small mb-0">We give back to the community.</p>
+          </div>
         </div>
-        <div class="col-md-2">
-          <h5>Contribution</h5>
-          <p>Give back to the ecosystem.</p>
+        <div class="col-md-2 col-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm">
+            <div class="fs-2 mb-1">😄</div>
+            <h6 class="fw-bold">Fun</h6>
+            <p class="text-muted small mb-0">We enjoy the work we do.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="py-5">
+  <!-- Products -->
+  <section id="products" class="py-5" data-aos="fade-up">
     <div class="container">
       <div class="section-title text-center mb-5">
-        <h2>Project Highlights</h2>
+        <h2>Our Products</h2>
+        <p class="text-muted">Smart IoT solutions built for real-world safety and control.</p>
       </div>
       <div class="row g-4">
-        <div class="col-md-6">
-          <div class="p-4 bg-white rounded shadow-sm">
-			  <a href="alertpulse.html">
-            <h5>AlertPulse</h5>
-            <p>Real-time safety, right at your fingertips.</p>
-			</a>
+
+        <!-- AlertPulse -->
+        <div class="col-md-6 d-flex">
+          <div class="card product-card w-100">
+            <div class="card-header">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-bell-fill fs-4"></i>
+                <h5 class="mb-0">AlertPulse</h5>
+              </div>
+              <small class="opacity-75">Smart IoT Emergency Alert System</small>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <p class="mb-3">Internet-connected alert system that delivers real-time notifications and automatic safety responses when emergencies are detected — smoke, temperature spikes, or motion anomalies.</p>
+              <div class="mb-3">
+                <span class="product-tag">Real-Time Alerts</span>
+                <span class="product-tag">Auto Safety Response</span>
+                <span class="product-tag">Remote Monitoring</span>
+                <span class="product-tag">Multi-Device</span>
+              </div>
+              <a href="alertpulse.html" class="btn btn-outline-primary mt-auto align-self-start">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="p-4 bg-white rounded shadow-sm">
-			  <a href="switch.html">
-            <h5>SafeSwitch Pro</h5>
-            <p>IoT-based vehicle tracking & diagnostics platform with alerting and analytics.</p>
-			</a>
+
+        <!-- SmartSwitchGuard -->
+        <div class="col-md-6 d-flex">
+          <div class="card product-card w-100">
+            <div class="card-header">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-toggle-on fs-4"></i>
+                <h5 class="mb-0">SmartSwitchGuard</h5>
+              </div>
+              <small class="opacity-75">Ultimate IoT Emergency Notifier Switch System</small>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <p class="mb-3">IoT-connected switch platform for remote device control, emergency alerting, and automatic safety shutdowns. Manage your home or office environment from anywhere.</p>
+              <div class="mb-3">
+                <span class="product-tag">Remote Control</span>
+                <span class="product-tag">Emergency Alerts</span>
+                <span class="product-tag">Energy Monitoring</span>
+                <span class="product-tag">Vacation Mode</span>
+              </div>
+              <a href="switch.html" class="btn btn-outline-primary mt-auto align-self-start">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <h2>Meet the Team</h2>
+        <p class="text-muted">The people behind Thingslab.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-card">
+            <img src="assets/img/team/team-1.jpg" alt="Yugandhar Kadu Chaudhari">
+            <div class="team-info">
+              <h6>Yugandhar Kadu Chaudhari</h6>
+              <small>Founder &amp; CEO</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-card">
+            <img src="assets/img/team/team-2.jpg" alt="Team Member">
+            <div class="team-info">
+              <h6>Team Member</h6>
+              <small>IoT Engineer</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card">
+            <img src="assets/img/team/team-3.jpg" alt="Team Member">
+            <div class="team-info">
+              <h6>Team Member</h6>
+              <small>Full-Stack Developer</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-card">
+            <img src="assets/img/team/team-4.jpg" alt="Team Member">
+            <div class="team-info">
+              <h6>Team Member</h6>
+              <small>Data Engineer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-card">
+            <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="mb-3">"AlertPulse has completely transformed how we monitor our facility. The instant notifications mean we can respond before small issues become big problems."</p>
+            <div class="d-flex align-items-center gap-2">
+              <div>
+                <strong style="font-size:0.95rem;">Rajesh Patil</strong><br>
+                <small class="text-muted">Facility Manager, Maharashtra</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card">
+            <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="mb-3">"SmartSwitchGuard gave us remote control over our office devices. The energy monitoring feature alone has helped us cut our electricity bills significantly."</p>
+            <div class="d-flex align-items-center gap-2">
+              <div>
+                <strong style="font-size:0.95rem;">Priya Deshmukh</strong><br>
+                <small class="text-muted">Office Administrator, Pune</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card">
+            <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="mb-3">"Thingslab built our web platform end-to-end, on time and exactly to spec. Their team communicates well and genuinely cares about the outcome."</p>
+            <div class="d-flex align-items-center gap-2">
+              <div>
+                <strong style="font-size:0.95rem;">Amit Sharma</strong><br>
+                <small class="text-muted">Startup Founder, Bangalore</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="py-4 bg-light" data-aos="fade-up">
+    <div class="container">
+      <p class="text-center text-muted mb-4" style="font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Trusted By</p>
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-5">
+        <img src="assets/img/clients/client-1.png" alt="Client" class="client-logo">
+        <img src="assets/img/clients/client-2.png" alt="Client" class="client-logo">
+        <img src="assets/img/clients/client-3.png" alt="Client" class="client-logo">
+        <img src="assets/img/clients/client-4.png" alt="Client" class="client-logo">
+        <img src="assets/img/clients/client-5.png" alt="Client" class="client-logo">
+        <img src="assets/img/clients/client-6.png" alt="Client" class="client-logo">
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <div class="section-title text-center mb-4">
-        <h2>Get In Touch</h2>
-      </div>
-
-<a href="mailto:contact@thingslab.io" 
-   style="display: block; text-align: center; font-size: 1.5rem; text-decoration: none; color: #007bff; font-family: Arial, sans-serif;">
-  contact@thingslab.io
-</a>
+  <section id="contact" class="py-5" style="background: linear-gradient(135deg, #2A2F4F, #4A55A2); color:#fff;" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-2">Got a project in mind?</h2>
+      <p class="mb-4" style="opacity:0.85; font-size:1.1rem;">Tell us what you're trying to build. We'll figure out the best way to make it happen.</p>
+      <a href="mailto:contact@thingslab.io" class="btn btn-light fw-semibold px-4 py-2 me-2 mb-2" style="color:#4A55A2; font-size:1rem;">
+        <i class="bi bi-envelope me-2"></i>contact@thingslab.io
+      </a>
+      <a href="tel:+917066555130" class="btn btn-outline-light fw-semibold px-4 py-2 mb-2" style="font-size:1rem;">
+        <i class="bi bi-telephone me-2"></i>+91 70665 55130
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="text-center">
     <div class="container">
-      <p class="mb-0">&copy; 2025 Thingslab — Built with curiosity & code.</p>
+      <img src="assets/img/logo/white.png" alt="Thingslab" style="height:32px;" class="mb-3 d-block mx-auto">
+      <p class="mb-1">
+        <a href="mailto:contact@thingslab.io">contact@thingslab.io</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+917066555130">+91 70665 55130</a>
+      </p>
+      <p class="mb-0" style="font-size:0.85rem; color:#a0aacc;">&copy; 2025 Thingslab Internet Services — Built with curiosity &amp; code.</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 60 });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
 </body>
 
 </html>
