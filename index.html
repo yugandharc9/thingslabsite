@@ -465,6 +465,7 @@
   </section>
 
   <!-- Team -->
+  <!-- Meet the Team section temporarily hidden
   <section id="team" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
       <div class="section-title text-center mb-5">
@@ -511,6 +512,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- Testimonials -->
   <section id="testimonials" class="py-5" data-aos="fade-up">
@@ -607,7 +609,9 @@
     AOS.init({ duration: 700, once: true, offset: 60 });
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
