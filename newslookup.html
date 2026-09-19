@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="NewsLookup by Thingslab — a desktop app that reads your chosen news feeds and scores sentiment on your own computer, offline, with no API keys.">
+    <meta property="og:title" content="NewsLookup | Offline News Sentiment Desktop App — Thingslab">
+    <meta property="og:description" content="Follow the news you care about and see the mood of every headline and the trend over time — all processed locally on your computer.">
+    <meta property="og:type" content="website">
+    <title>NewsLookup | Offline News Sentiment Desktop App — Thingslab</title>
+    <link href="assets/img/Thingslab_Logo/PNG/Logo_Symbol_Only-05.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4A55A2;
+            color: #fff;
+            padding: 20px 20px 30px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #4A55A2;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+        .feature {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .feature div {
+            flex: 1;
+            min-width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .feature h3 {
+            color: #4A55A2;
+            margin-top: 0;
+        }
+        .feature i {
+            margin-right: 6px;
+        }
+        .btn-download {
+            background-color: #fff;
+            color: #4A55A2;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 6px 4px;
+            border: 2px solid #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-download:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+        .download-note {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin: 10px 0 0;
+        }
+        .steps {
+            padding-left: 1.2em;
+        }
+        .steps li {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            margin-bottom: 6px;
+        }
+        footer {
+            background-color: #4A55A2;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #ffff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-dark" style="background-color: #2A2F4F;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/img/logo/white.png" alt="Thingslab" style="height:38px;">
+    </a>
+    <a href="index.html#products" class="btn btn-sm btn-outline-light">&#8592; All Products</a>
+  </div>
+</nav>
+
+<header>
+    <h1>NewsLookup</h1>
+    <p>Your Offline News Sentiment Desktop App</p>
+    <!-- TODO: replace each "#" with the real installer URL once builds are published. -->
+    <a href="#" class="btn-download" id="download-windows"><i class="fab fa-windows"></i> Download for Windows</a>
+    <a href="#" class="btn-download" id="download-macos"><i class="fab fa-apple"></i> Download for macOS</a>
+    <a href="#" class="btn-download" id="download-linux"><i class="fab fa-linux"></i> Download for Linux</a>
+    <p class="download-note">Installers coming soon</p>
+</header>
+
+<section>
+    <h2>What is NewsLookup?</h2>
+    <p><strong>NewsLookup</strong> is a desktop app that follows the news sources you choose and tells you, at a glance, whether the coverage is turning positive, negative, or neutral. Every headline is scored by an AI model that runs entirely on your own computer, so there are no accounts to create, no API keys to manage, and no cloud AI service that sees what you read.</p>
+
+    <h2>Key Features</h2>
+    <div class="feature">
+        <div>
+            <h3><i class="fas fa-lock"></i>Private &amp; Offline</h3>
+            <p>Sentiment is calculated on your machine using the FinBERT model. It downloads once (about 110 MB) on first run; after that, scoring needs no internet connection and no cloud service.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-rss"></i>Pick Your Own Sources</h3>
+            <p>Choose from a catalog of news feeds in a simple checkbox list, or add your own keywords &mdash; each keyword becomes its own live news search feed. The catalog can be updated without reinstalling the app.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-chart-line"></i>Sentiment Trend Charts</h3>
+            <p>See how sentiment moves over time with per-item scores and a rolling trend line, for a single feed or all your feeds together. View today, the last 7, 30, or 90 days.</p>
+        </div>
+    </div>
+
+    <h2>Headline-by-Headline Sentiment</h2>
+    <p>Each news item carries a clear positive, negative, or neutral badge, so you can scan a long list of headlines in seconds instead of reading them all. Browse by today, the last 7 or 30 days, or everything you have collected.</p>
+
+    <h2>Built for Market News</h2>
+    <p>The model is tuned for financial language &mdash; earnings, guidance, and analyst commentary &mdash; so it reads market-moving tone far more reliably than a general-purpose sentiment tool. Articles that don't look like market news are marked off-topic and left out of the overall score, and you can override that decision with one click.</p>
+
+    <h2>Weight the Sources You Trust</h2>
+    <p>Star a feed as important and it carries extra weight in the blended overall sentiment, so your most trusted publishers count for more than the rest.</p>
+
+    <h2>Always Up to Date</h2>
+    <p>NewsLookup refreshes all your feeds automatically every 30 minutes in the background, and you can refresh on demand at any time. New items are scored as they arrive.</p>
+
+    <h2>Your History Stays With You</h2>
+    <p>Your subscriptions and sentiment history are stored locally on your computer, so everything is still there the next time you open the app.</p>
+
+    <h2>Getting Started</h2>
+    <ol class="steps">
+        <li>Download and install NewsLookup for your computer.</li>
+        <li>On first launch, tick the news sources you want to follow and add any keywords.</li>
+        <li>Let the sentiment model finish its one-time download.</li>
+        <li>Watch your headlines and sentiment trends fill in.</li>
+    </ol>
+
+    <div style="background-color:#4A55A2; color:#fff; border-radius:8px; padding:30px 20px; text-align:center; margin-top:40px;">
+        <h2 style="color:#fff;">Try NewsLookup Today</h2>
+        <!-- TODO: replace each "#" with the real installer URL once builds are published. -->
+        <a href="#" class="btn-download"><i class="fab fa-windows"></i> Windows</a>
+        <a href="#" class="btn-download"><i class="fab fa-apple"></i> macOS</a>
+        <a href="#" class="btn-download"><i class="fab fa-linux"></i> Linux</a>
+    </div>
+</section>
+
+<footer>
+    <img src="assets/img/logo/white.png" alt="Thingslab" style="height:30px; display:block; margin: 0 auto 12px;">
+    <p>Contact Us: <a href="mailto:contact@thingslab.io">contact@thingslab.io</a> | Phone: <a href="tel:+917066555130">+91 70665 55130</a></p>
+    <p style="font-size:0.85rem; opacity:0.7;">&copy; 2025 Thingslab Internet Services</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
