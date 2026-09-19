@@ -245,8 +245,7 @@
         <h1>Don't miss the headline that moves your trade.</h1>
         <p class="lead mt-3">You can't watch a dozen news sites at once. NewsLookup pulls them into one live feed, scores every headline positive, negative or neutral, and shows you where the mood is turning &mdash; on your own desktop.</p>
         <div class="mt-4">
-          <!-- TODO: replace each "#" with the real installer URL once builds are published. -->
-          <a href="#" class="btn-download" id="download-windows"><i class="fab fa-windows"></i> Download for Windows</a>
+          <a href="downloads/NewsLookup-amd64-installer.exe" class="btn-download" id="download-windows" download><i class="fab fa-windows"></i> Download for Windows</a>
         </div>
         <p class="hero-note">Runs on your PC &middot; no account &middot; no API key</p>
       </div>
@@ -510,21 +509,20 @@
       <p>Download the Windows installer. Setup takes a couple of minutes, mostly the one-time sentiment model download.</p>
     </div>
     <div class="table-scroll">
-    <!-- TODO: replace each "#" with the real installer URL once builds are published. -->
     <table class="build-table">
         <thead>
             <tr><th>Platform</th><th>Package</th><th>Approx. size</th><th></th></tr>
         </thead>
         <tbody>
-            <tr><td><i class="fab fa-windows"></i> Windows 10 / 11 (64-bit)</td><td>Installer (.exe)</td><td>12 MB</td><td><a href="#" class="btn-dl-sm"><i class="fas fa-download"></i> Download</a></td></tr>
+            <tr><td><i class="fab fa-windows"></i> Windows 10 / 11 (64-bit)</td><td>Installer (.exe)</td><td>12 MB</td><td><a href="downloads/NewsLookup-amd64-installer.exe" class="btn-dl-sm" download><i class="fas fa-download"></i> Download</a></td></tr>
         </tbody>
     </table>
     </div>
 
     <div class="install-note">
       <p><strong>First time installing on Windows?</strong> You may see a blue <em>&ldquo;Windows protected your PC&rdquo;</em> screen, because the installer isn't code-signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
-      <!-- TODO: paste the real SHA-256 of NewsLookup-amd64-installer.exe here for each release. -->
-      <p><strong>Verify your download</strong> &mdash; SHA-256: <code>added when the release is published</code></p>
+      <!-- Update this SHA-256 (and downloads/NewsLookup-amd64-installer.exe) for every release: sha256sum downloads/NewsLookup-amd64-installer.exe -->
+      <p><strong>Verify your download</strong> &mdash; SHA-256: <code>d36d2fb2d514a329cdcc4708b9b0d4db391e9028028ca24bebf0b362e412e01d</code></p>
       <p class="mb-0">To check the file you downloaded, open Command Prompt or PowerShell in your Downloads folder and run <code>certutil -hashfile NewsLookup-amd64-installer.exe SHA256</code>. The result should match the value above.</p>
     </div>
 
@@ -556,7 +554,7 @@
     <div class="cta">
       <h2>Stop scrolling five tabs. Start reading the news that matters.</h2>
       <p class="mb-4" style="color:#e3e6f7;">One feed. Every headline scored. Nothing sent to a cloud AI.</p>
-      <a href="#" class="btn-download"><i class="fab fa-windows"></i> Download for Windows</a>
+      <a href="downloads/NewsLookup-amd64-installer.exe" class="btn-download" download><i class="fab fa-windows"></i> Download for Windows</a>
     </div>
     <p class="fineprint">NewsLookup is an information tool, not investment advice. Sentiment scores are a model's reading of headline tone and can misjudge an individual headline &mdash; use them to decide what to read first, and rely on the overall trend rather than any single badge. Screenshots show real headlines scored by the app on 19 Sept 2026.</p>
   </div>
