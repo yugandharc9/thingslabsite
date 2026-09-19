@@ -199,6 +199,19 @@
             text-align: center;
         }
         .cta h2 { color: #fff; font-weight: 800; }
+        .install-note {
+            background: #fff;
+            border: 1px solid #dfe2f2;
+            border-left: 4px solid var(--brand);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 24px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .install-note p { font-size: inherit; line-height: inherit; margin: 0 0 8px; }
+        .install-note p:last-child { margin-bottom: 0; }
+        .install-note code { overflow-wrap: anywhere; }
         .fineprint { font-size: 0.85rem; color: #777; line-height: 1.55; max-width: 820px; margin: 28px auto 0; text-align: center; }
 
         footer { background-color: var(--brand); color: #fff; padding: 20px; text-align: center; }
@@ -506,6 +519,13 @@
             <tr><td><i class="fab fa-windows"></i> Windows 10 / 11 (64-bit)</td><td>Installer (.exe)</td><td>12 MB</td><td><a href="#" class="btn-dl-sm"><i class="fas fa-download"></i> Download</a></td></tr>
         </tbody>
     </table>
+    </div>
+
+    <div class="install-note">
+      <p><strong>First time installing on Windows?</strong> You may see a blue <em>&ldquo;Windows protected your PC&rdquo;</em> screen, because the installer isn't code-signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+      <!-- TODO: paste the real SHA-256 of NewsLookup-amd64-installer.exe here for each release. -->
+      <p><strong>Verify your download</strong> &mdash; SHA-256: <code>added when the release is published</code></p>
+      <p class="mb-0">To check the file you downloaded, open Command Prompt or PowerShell in your Downloads folder and run <code>certutil -hashfile NewsLookup-amd64-installer.exe SHA256</code>. The result should match the value above.</p>
     </div>
 
     <div class="row g-4 mt-2">
