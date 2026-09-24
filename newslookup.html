@@ -247,7 +247,7 @@
         <div class="mt-4">
           <a href="downloads/NewsLookup-amd64-installer.exe" class="btn-download" id="download-windows" download><i class="fab fa-windows"></i> Download for Windows</a>
         </div>
-        <p class="hero-note">Runs on your PC &middot; no account &middot; no API key</p>
+        <p class="hero-note">10-day free trial, then &#8377;1,999 once for a lifetime license &middot; runs on your PC &middot; no account &middot; no API key</p>
       </div>
       <div class="col-lg-7">
         <div class="app-window">
@@ -507,6 +507,7 @@
       <span class="kicker">Download</span>
       <h2>Get NewsLookup</h2>
       <p>Download the Windows installer. Setup takes a couple of minutes, mostly the one-time sentiment model download.</p>
+      <p>Every feature is free for 10 days. After that, a lifetime license is a one-time payment of &#8377;1,999 &mdash; no subscription. You can buy it from inside the app at any time. If you don't, the news you've already collected stays readable, but NewsLookup stops fetching new headlines.</p>
     </div>
     <div class="table-scroll">
     <table class="build-table">
@@ -522,7 +523,7 @@
     <div class="install-note">
       <p><strong>First time installing on Windows?</strong> You may see a blue <em>&ldquo;Windows protected your PC&rdquo;</em> screen, because the installer isn't code-signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
       <!-- Update this SHA-256 (and downloads/NewsLookup-amd64-installer.exe) for every release: sha256sum downloads/NewsLookup-amd64-installer.exe -->
-      <p><strong>Verify your download</strong> &mdash; SHA-256: <code>d36d2fb2d514a329cdcc4708b9b0d4db391e9028028ca24bebf0b362e412e01d</code></p>
+      <p><strong>Verify your download</strong> &mdash; SHA-256: <code>03e793714bf2ebc829026a6dc30b6136d7b1ceef56fd2f718ce69c419aed2d06</code></p>
       <p class="mb-0">To check the file you downloaded, open Command Prompt or PowerShell in your Downloads folder and run <code>certutil -hashfile NewsLookup-amd64-installer.exe SHA256</code>. The result should match the value above.</p>
     </div>
 
@@ -532,7 +533,7 @@
         <ul class="ticks">
           <li><strong>Windows:</strong> Windows 10 or 11, 64-bit, with the Microsoft WebView2 runtime (already included in current Windows updates).</li>
           <li><strong>Disk space:</strong> about 150 MB free &mdash; the app plus the one-time sentiment model download (about 110 MB).</li>
-          <li><strong>Internet:</strong> needed on first run to download the model, and to fetch fresh headlines from your sources.</li>
+          <li><strong>Internet:</strong> needed on first run to download the model, to fetch fresh headlines from your sources, and to check your trial or license at least every 5 days.</li>
         </ul>
       </div>
       <div class="col-md-6">
@@ -543,6 +544,48 @@
           <li>Let the sentiment model finish its one-time download.</li>
           <li>Watch your headlines fill in, scored and sorted &mdash; then keep it open beside your trading screen.</li>
         </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Support ================= -->
+<section class="block" id="support">
+  <div class="container">
+    <div class="section-head mb-4">
+      <span class="kicker">Support</span>
+      <h2>Need help or found a bug?</h2>
+      <p>Email us and a person will reply. To help us find the problem quickly, please include your NewsLookup version<span id="support-version-wrap" hidden> (you're on <strong id="support-version"></strong>)</span>, which is shown at the bottom of the app's sidebar, your Windows version, and what you expected to happen.</p>
+      <a id="support-mail" class="btn btn-primary mt-2" href="mailto:contact@thingslab.io?subject=NewsLookup%20support"><i class="fas fa-envelope"></i> contact@thingslab.io</a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="mini-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Windows says &ldquo;protected your PC&rdquo;</h3>
+          <p>The installer isn't code-signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="mini-card">
+          <i class="fas fa-download"></i>
+          <h3>Stuck on &ldquo;starting sentiment model&rdquo;</h3>
+          <p>The first run downloads a model of about 110 MB, so it needs an internet connection. It keeps retrying by itself if the connection drops.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="mini-card">
+          <i class="fas fa-newspaper"></i>
+          <h3>No headlines showing</h3>
+          <p>Add sources with <strong>+ Add news sources</strong> and give it a minute. <strong>Market only</strong> and <strong>Today</strong> are on by default, so switch them off to see everything.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="mini-card">
+          <i class="fas fa-undo"></i>
+          <h3>Start again from scratch</h3>
+          <p>Close NewsLookup and delete the folder <code>%AppData%\feedclassifier</code>. This removes your sources, history and the downloaded model.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -566,6 +609,17 @@
     <p style="font-size:0.85rem; opacity:0.7; margin:0;">&copy; 2025 Thingslab Internet Services</p>
 </footer>
 
+<script>
+  // The app opens this page with ?v=<version>; show it so it gets quoted in support emails.
+  (function () {
+    var v = new URLSearchParams(location.search).get("v");
+    if (!v || !/^[\w.+-]{1,40}$/.test(v)) return;
+    document.getElementById("support-version").textContent = /^\d/.test(v) ? "v" + v : v;
+    document.getElementById("support-version-wrap").hidden = false;
+    document.getElementById("support-mail").href =
+      "mailto:contact@thingslab.io?subject=" + encodeURIComponent("NewsLookup " + v + " support");
+  })();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
