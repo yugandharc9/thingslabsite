@@ -146,6 +146,88 @@
       object-fit: contain;
     }
     .client-logo:hover { filter: none; opacity: 1; }
+    .nav-link.nav-highlight {
+      color: #fff !important;
+      background: rgba(255,255,255,0.14);
+      border-radius: 20px;
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+    .nav-link.nav-highlight:hover { background: rgba(255,255,255,0.24); }
+    .hero-announce {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      border-radius: 30px;
+      padding: 6px 16px 6px 6px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: background 0.2s;
+    }
+    .hero-announce:hover { background: rgba(255,255,255,0.22); color: #fff; }
+    .hero-announce .badge-new {
+      background: #fff;
+      color: #4A55A2;
+      font-weight: 700;
+      font-size: 0.75rem;
+      border-radius: 20px;
+      padding: 3px 10px;
+    }
+    .newslookup-feature {
+      background: #fff;
+      border-bottom: 1px solid #e6e9f4;
+    }
+    .newslookup-feature .eyebrow {
+      display: inline-block;
+      color: #4A55A2;
+      background: #eef0fa;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+    .newslookup-feature h2 {
+      font-weight: 700;
+      color: #2A2F4F;
+      font-size: 2.2rem;
+    }
+    .newslookup-feature .nl-points li {
+      margin-bottom: 8px;
+    }
+    .newslookup-feature .nl-points i {
+      color: #4A55A2;
+      margin-right: 8px;
+    }
+    .nl-shot {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(42,47,79,0.22);
+      background: #1e2235;
+    }
+    .nl-shot-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      background: #2A2F4F;
+      color: #cfd4ee;
+      font-size: 0.8rem;
+    }
+    .nl-shot-bar span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #5a6190;
+    }
+    .nl-shot-bar b { margin-left: 8px; font-weight: 600; }
+    .nl-shot img { display: block; width: 100%; height: auto; }
   </style>
 </head>
 
@@ -166,6 +248,7 @@
           <li class="nav-item"><a class="nav-link" href="#work">Our Work</a></li>
           <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link nav-highlight" href="newslookup.html"><i class="bi bi-newspaper me-1"></i>NewsLookup</a></li>
         </ul>
       </div>
     </div>
@@ -175,9 +258,43 @@
   <section class="hero">
     <div class="container">
       <img src="assets/img/Thingslab_Logo/PNG/Logo_Full-04.png" alt="Thingslab" class="hero-logo d-block mx-auto">
+      <a href="#newslookup" class="hero-announce">
+        <span class="badge-new">NEW</span>
+        NewsLookup — market news sentiment for share traders <i class="bi bi-arrow-right"></i>
+      </a>
       <p class="lead" style="opacity:0.9;">We go extra mile to solve real-world problems using tech.</p>
       <a href="#work" class="btn btn-light me-2 mt-3 fw-semibold" style="color:#4A55A2;">See Our Work</a>
       <a href="#contact" class="btn btn-primary mt-3">Work With Us</a>
+    </div>
+  </section>
+
+  <!-- NewsLookup (featured product) -->
+  <section id="newslookup" class="newslookup-feature py-5">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="eyebrow"><i class="bi bi-newspaper me-1"></i> Our product &middot; Windows app</span>
+          <h2 class="mb-3">NewsLookup</h2>
+          <p class="lead mb-3">Market news sentiment for share traders. All your news sources in one live feed, with every headline scored positive, negative or neutral on your own PC.</p>
+          <ul class="list-unstyled nl-points mb-4">
+            <li><i class="bi bi-check-circle-fill"></i>One newest-first feed from all the sources you follow</li>
+            <li><i class="bi bi-check-circle-fill"></i>Follow any stock or keyword as its own live Google News search</li>
+            <li><i class="bi bi-check-circle-fill"></i>Off-topic stories filtered out of the sentiment score</li>
+            <li><i class="bi bi-check-circle-fill"></i>Sentiment trend charts over time</li>
+          </ul>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <a href="downloads/NewsLookup-amd64-installer.exe" class="btn btn-primary fw-semibold" download><i class="bi bi-windows me-2"></i>Download for Windows</a>
+            <a href="newslookup.html" class="btn btn-outline-primary fw-semibold" style="color:#4A55A2; border-color:#4A55A2;">See how it works <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <p class="text-muted small mb-0">Free for 10 days. Then a one-time &#8377;1,999 lifetime license, no subscription.</p>
+        </div>
+        <div class="col-lg-7">
+          <a href="newslookup.html" class="nl-shot d-block text-decoration-none">
+            <div class="nl-shot-bar"><span></span><span></span><span></span><b>NewsLookup</b></div>
+            <img src="assets/img/newslookup/dashboard-dark.webp" width="2560" height="1960" alt="NewsLookup showing news from many sources in one list, each headline tagged Positive, Negative or Neutral">
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
