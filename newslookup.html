@@ -214,6 +214,35 @@
         .install-note code { overflow-wrap: anywhere; }
         .fineprint { font-size: 0.85rem; color: #777; line-height: 1.55; max-width: 820px; margin: 28px auto 0; text-align: center; }
 
+        /* ---------- Alert toast mock (the notification's real wording) ---------- */
+        .toast-stage {
+            background: linear-gradient(135deg, #2A2F4F, #4A55A2);
+            border-radius: 14px;
+            padding: 48px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .win-toast {
+            width: 100%;
+            max-width: 380px;
+            background: #2b2b2b;
+            color: #f3f3f3;
+            border: 1px solid #3d3d3d;
+            border-radius: 8px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+            padding: 12px 16px 16px;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            text-align: left;
+        }
+        .win-toast .toast-app { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: #c8c8c8; margin-bottom: 10px; }
+        .win-toast .toast-app img { width: 16px; height: 16px; }
+        .win-toast .toast-app i { margin-left: auto; font-size: 0.8rem; }
+        .win-toast .toast-body { display: flex; gap: 12px; }
+        .win-toast .toast-body > img { width: 48px; height: 48px; flex: none; }
+        .win-toast b { display: block; font-size: 0.95rem; margin-bottom: 4px; }
+        .win-toast p { font-size: 0.85rem; line-height: 1.45; margin: 0 0 3px; color: #dcdcdc; }
+        .win-toast p.more { color: #a8a8a8; }
+
         footer { background-color: var(--brand); color: #fff; padding: 20px; text-align: center; }
         footer a { color: #fff; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
@@ -243,7 +272,7 @@
       <div class="col-lg-5">
         <span class="eyebrow">For share traders</span>
         <h1>Don't miss the headline that moves your trade.</h1>
-        <p class="lead mt-3">You can't watch a dozen news sites at once. NewsLookup pulls them into one live feed, scores every headline positive, negative or neutral, and shows you where the mood is turning &mdash; on your own desktop.</p>
+        <p class="lead mt-3">You can't watch a dozen news sites at once. NewsLookup pulls them into one live feed, scores every headline positive, negative or neutral, shows you where the mood is turning, and alerts you with a notification and a sound when market news lands &mdash; on your own desktop.</p>
         <div class="mt-4">
           <a href="downloads/NewsLookup-amd64-installer.exe" class="btn-download" id="download-windows" download><i class="fab fa-windows"></i> Download for Windows</a>
         </div>
@@ -460,8 +489,45 @@
   </div>
 </section>
 
+<!-- ================= Feature 6: alerts ================= -->
+<section class="block" id="alerts">
+  <div class="container">
+    <div class="row align-items-center gy-4 gx-lg-5">
+      <div class="col-lg-6 feature-text">
+        <span class="kicker">Market news alerts</span>
+        <h2>Look away from the screen. NewsLookup will call you back.</h2>
+        <p>When fresh market news comes in, NewsLookup shows a <strong>Windows notification</strong> and plays the <strong>notification sound</strong>. The notification lists up to three headlines, each with its tone, so you can tell at a glance whether it's worth switching windows.</p>
+        <ul class="ticks">
+          <li>Only market news alerts you &mdash; headlines set aside as off-topic stay quiet.</li>
+          <li>One notification per refresh, however many headlines arrived, so it never floods your screen.</li>
+          <li>No alerts for old news: the backlog when you add a source, or headlines more than six hours old.</li>
+          <li>Two switches in the sidebar: turn alerts off, or keep the notification and mute the sound. Click <em>Test</em> to check Windows lets it through.</li>
+        </ul>
+        <p class="mt-3 mb-0" style="font-size:0.93rem; color:#666;">Alerts follow the refresh cycle &mdash; every 30 minutes, or whenever you click refresh &mdash; so they're a nudge, not a tick-by-tick feed. Windows <em>Do not disturb</em> can hold them back.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="toast-stage" role="img" aria-label="A Windows notification from NewsLookup reading: 5 new market headlines. Negative: Forex reserves fall $14.88 bn to $765.90 bn. Positive: Sensex gains 315 points, Nifty settles above 23,100 on value buying. Positive: Quick Wrap: Nifty Realty Index records a surge of 0.92%. Plus 2 more.">
+          <div class="win-toast" aria-hidden="true">
+            <div class="toast-app"><img src="assets/img/newslookup/icon.png" alt="">NewsLookup<i class="fas fa-times"></i></div>
+            <div class="toast-body">
+              <img src="assets/img/newslookup/icon.png" alt="">
+              <div>
+                <b>5 new market headlines</b>
+                <p>Negative: Forex reserves fall $14.88 bn to $765.90 bn</p>
+                <p>Positive: Sensex gains 315 points, Nifty settles above 23,100 on value buying</p>
+                <p>Positive: Quick Wrap: Nifty Realty Index records a surge of 0.92%</p>
+                <p class="more">+2 more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= Always on ================= -->
-<section class="block">
+<section class="block alt">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Built to stay out of your way</span>
@@ -501,7 +567,7 @@
 </section>
 
 <!-- ================= Downloads ================= -->
-<section class="block alt" id="download">
+<section class="block" id="download">
   <div class="container">
     <div class="section-head mb-4">
       <span class="kicker">Download</span>
@@ -550,7 +616,7 @@
 </section>
 
 <!-- ================= Support ================= -->
-<section class="block" id="support">
+<section class="block alt" id="support">
   <div class="container">
     <div class="section-head mb-4">
       <span class="kicker">Support</span>
@@ -599,7 +665,7 @@
       <p class="mb-4" style="color:#e3e6f7;">One feed. Every headline scored. Nothing sent to a cloud AI.</p>
       <a href="downloads/NewsLookup-amd64-installer.exe" class="btn-download" download><i class="fab fa-windows"></i> Download for Windows</a>
     </div>
-    <p class="fineprint">NewsLookup is an information tool, not investment advice. Sentiment scores are a model's reading of headline tone and can misjudge an individual headline &mdash; use them to decide what to read first, and rely on the overall trend rather than any single badge. Screenshots show real headlines scored by the app on 19 Sept 2026.</p>
+    <p class="fineprint">NewsLookup is an information tool, not investment advice. Sentiment scores are a model's reading of headline tone and can misjudge an individual headline &mdash; use them to decide what to read first, and rely on the overall trend rather than any single badge. Screenshots show real headlines scored by the app on 19 Sept 2026; the alert example uses real headlines from 25 Sept 2026.</p>
   </div>
 </section>
 
