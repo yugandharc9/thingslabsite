@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Thingslab Internet Services — IoT products, web engineering, and data solutions built in India.">
-  <meta name="keywords" content="Thingslab, IoT, web development, data engineering, AlertPulse, SmartSwitchGuard, NewsLookup, India">
+  <meta name="keywords" content="Thingslab, IoT, web development, data engineering, AlertPulse, SmartSwitchGuard, NewsLookup, FreshBajaar, India">
   <meta property="og:title" content="Thingslab | Smart Web & IoT Solutions">
   <meta property="og:description" content="IoT products, web engineering, and data solutions built in India.">
   <meta property="og:image" content="assets/img/Thingslab_Logo/PNG/Logo_Full-04.png">
@@ -228,6 +228,34 @@
     }
     .nl-shot-bar b { margin-left: 8px; font-weight: 600; }
     .nl-shot img { display: block; width: 100%; height: auto; }
+    .freshbajaar-feature {
+      background: #f6f8f1;
+      border-bottom: 1px solid #e3e9d8;
+    }
+    .freshbajaar-feature .eyebrow {
+      display: inline-block;
+      color: #24561a;
+      background: #e3eed9;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+    .freshbajaar-feature h2 { font-weight: 700; color: #2A2F4F; font-size: 2.2rem; }
+    .freshbajaar-feature .fb-points li { margin-bottom: 8px; }
+    .freshbajaar-feature .fb-points i { color: #357A22; margin-right: 8px; }
+    .btn-fb { background: #357A22; color: #fff; border: none; padding: 10px 25px; }
+    .btn-fb:hover { background: #24561a; color: #fff; }
+    .fb-shot {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(36,86,26,0.18);
+    }
+    .fb-shot img { display: block; width: 100%; height: auto; }
   </style>
 </head>
 
@@ -249,6 +277,7 @@
           <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           <li class="nav-item ms-lg-2"><a class="nav-link nav-highlight" href="newslookup.html"><i class="bi bi-newspaper me-1"></i>NewsLookup</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link nav-highlight" href="freshbajaar.html"><i class="bi bi-basket2 me-1"></i>FreshBajaar</a></li>
         </ul>
       </div>
     </div>
@@ -293,6 +322,35 @@
             <div class="nl-shot-bar"><span></span><span></span><span></span><b>NewsLookup</b></div>
             <img src="assets/img/newslookup/dashboard-dark.webp" width="2560" height="1960" alt="NewsLookup showing news from many sources in one list, each headline tagged Positive, Negative or Neutral">
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FreshBajaar (featured product) -->
+  <section id="freshbajaar" class="freshbajaar-feature py-5">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 order-lg-2">
+          <a href="freshbajaar.html" class="fb-shot d-block">
+            <img src="assets/img/freshbajaar/produce.webp" width="1200" height="675" loading="lazy" alt="FreshBajaar flow: advance booking, farmers, after yield, transport, minimum storage, delivered to the family">
+          </a>
+        </div>
+        <div class="col-lg-5 order-lg-1">
+          <span class="eyebrow"><i class="bi bi-basket2 me-1"></i> Our product &middot; freshbajaar.in</span>
+          <h2 class="mb-3">FreshBajaar</h2>
+          <p class="lead mb-3">Fresh vegetables and fruits direct from local farmers. Order today's stock, or book produce before it's harvested &mdash; no payment on booking and free cancellation.</p>
+          <ul class="list-unstyled fb-points mb-4">
+            <li><i class="bi bi-check-circle-fill"></i>Advance booking so farmers know demand before harvest</li>
+            <li><i class="bi bi-check-circle-fill"></i>Small farmers pooled into one listing to fill big orders</li>
+            <li><i class="bi bi-check-circle-fill"></i>Live delivery quotes by pin code, secure online payment</li>
+            <li><i class="bi bi-check-circle-fill"></i>Seller panel for farmers with tracked payouts</li>
+          </ul>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <a href="https://freshbajaar.in" target="_blank" rel="noopener" class="btn btn-fb fw-semibold"><i class="bi bi-box-arrow-up-right me-2"></i>Visit freshbajaar.in</a>
+            <a href="freshbajaar.html" class="btn btn-outline-success fw-semibold">See all features <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <p class="text-muted small mb-0">FreshBajaar is owned and operated by THINGSLAB INTERNET SERVICES PRIVATE LIMITED.</p>
         </div>
       </div>
     </div>
@@ -515,7 +573,7 @@
     <div class="container">
       <div class="section-title text-center mb-5">
         <h2>Our Products</h2>
-        <p class="text-muted">Smart IoT solutions and desktop tools built for real-world safety, control, and insight.</p>
+        <p class="text-muted">Products we build and run ourselves, from desktop tools to online marketplaces.</p>
       </div>
       <div class="row g-4 justify-content-center">
 
@@ -585,6 +643,33 @@
                 <span class="product-tag">Windows</span>
               </div>
               <a href="newslookup.html" class="btn btn-outline-primary mt-auto align-self-start">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FreshBajaar -->
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card product-card w-100">
+            <div class="card-header">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-basket2-fill fs-4"></i>
+                <h5 class="mb-0">FreshBajaar</h5>
+              </div>
+              <small class="opacity-75">Farm-to-Home Produce Marketplace &middot; freshbajaar.in</small>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <p class="mb-3">Online marketplace where families buy fresh vegetables and fruits straight from local farmers &mdash; or book them before harvest with no payment and free cancellation. Farmers list produce, see demand early and get paid per order.</p>
+              <div class="mb-3">
+                <span class="product-tag">Advance Booking</span>
+                <span class="product-tag">Farmer Pooling</span>
+                <span class="product-tag">Pin Code Delivery</span>
+                <span class="product-tag">Online Payments</span>
+                <span class="product-tag">Seller Panel</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2 mt-auto">
+                <a href="freshbajaar.html" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                <a href="https://freshbajaar.in" target="_blank" rel="noopener" class="btn btn-link px-1" style="color:#357A22; font-weight:600;">freshbajaar.in <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -678,7 +763,8 @@
         &nbsp;|&nbsp;
         <a href="tel:+917066555130">+91 70665 55130</a>
       </p>
-      <p class="mb-0" style="font-size:0.85rem; color:#a0aacc;">&copy; 2025 Thingslab Internet Services — Built with curiosity &amp; code.</p>
+      <p class="mb-0" style="font-size:0.85rem; color:#a0aacc;">&copy; 2026 THINGSLAB INTERNET SERVICES PRIVATE LIMITED — Built with curiosity &amp; code.</p>
+      <p class="mb-0 mt-1" style="font-size:0.85rem; color:#a0aacc;">Our products: <a href="newslookup.html">NewsLookup</a> &middot; <a href="freshbajaar.html">FreshBajaar</a> (<a href="https://freshbajaar.in" target="_blank" rel="noopener">freshbajaar.in</a>)</p>
     </div>
   </footer>
 
